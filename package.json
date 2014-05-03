@@ -1,0 +1,42 @@
+{
+  "name": "kreate.js",
+  "version": "0.0.1",
+  "description": "A tiny element creator plugin for jQuery.",
+  "main": "dist/kreate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ItsJonQ/kreate.git"
+  },
+  "keywords": [
+    "kreate",
+    "kreate.js",
+    "jQuery",
+    "plugin",
+    "element",
+    "creator",
+    "generator",
+    "elements",
+    "dom"
+  ],
+  "author": "Jon Q",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/itsjonq/kreate/blob/master/LICENSE"
+  },
+  "homepage": "https://github.com/ItsJonQ/kreate",
+  "bugs": {
+    "url": "https://github.com/ItsJonQ/kreate/issues"
+  }
+  "devDependencies": {
+    "grunt-cli": "~0.1.13",
+    "grunt": "~0.4.4",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-qunit": "~0.4.0"
+  }
+}

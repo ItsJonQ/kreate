@@ -1,0 +1,30 @@
+{
+  "name": "kreate.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ItsJonQ/kreate",
+  "authors": [
+    "ItsJonQ <itsjonq@gmail.com>"
+  ],
+  "description": "A tiny element creator plugin for jQuery.",
+  "keywords": [
+    "kreate",
+    "kreate.js",
+    "jQuery",
+    "plugin",
+    "element",
+    "creator",
+    "generator",
+    "elements",
+    "dom"
+  ],
+  "main": "dist/kreate.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
