@@ -19,14 +19,15 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <section class="jumbotron intro">
+    <!-- Section: Intro -->
+    <section class="featurette white" id="intro">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-solo text-center">
                     <header class="logo">
                         <img src="images/kreate-logo.png" title="Kreate Logo" class="image-logo">
                         <div class="logo-text">
-                            <h1>kreate<span class="thin">.js</span></h1>
+                            <h1><strong>kreate</strong>.js</h1>
                         </div>
                     </header>
                     <p>
@@ -38,8 +39,129 @@
         </div>
     </section>
 
-    <hr>
+    <!-- Section: What is Kreate? -->
+    <section class="featurette" id="what-is-kreate">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-solo">
+                    <header class="text-center">
+                        <h2>What is <strong>Kreate</strong>?</h2>
+                    </header>
+                    <p class="lead">
+                        Kreate is a tiny helper method for jQuery that can quickly generate DOM elements as a standard <strong>jQuery object</strong>. You can use Kreate to create a single DOM element (such as a &lt;div&gt;), up to however many elements your browser can handle before crashing*.
+                    </p>
+                    <p><small>* I was able to generate 10 million elements. I tried 1 billion once, but Chrome crashed :(</small></p>
 
+                    <h3>Getting Started</h3>
+                    <p>
+                        Simply <a href="https://github.com/ItsJonQ/kreate">download Kreate</a> and add the kreate.js / kreate.min.js file to the project (the file should be located in dist/kreate.js).
+                    </p>
+
+                    <h4>Installing with Bower</h4>
+                    <p><a href="http://bower.io/" target="_blank">Bower</a> is awesome. If you're using Bower, you can download/install Kreate with the follow command line:</p>
+                    <pre><code>bower install kreate</code></pre>
+
+                    <p>Load it up <strong>after</strong> jQuery, and you should be good to go!</p>
+                    <h4>Example</h4>
+                    <div class="highlight">
+<pre><code>&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/kreate.min.js"&gt;&lt;/script&gt;
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seciton: Kreate Something Fast -->
+    <section class="featurette white" id="what-is-kreate">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-solo">
+                    <header class="text-center">
+                        <h2><strong>Kreate</strong> Something Fast</h2>
+                    </header>
+                    <p class="lead">
+                        In most cases, Kreate can create a single or multiple elements faster than jQuery - sometimes, <strong>significantly</strong> faster.
+                    </p>
+                    <p>
+                        Below are a couple of performance test results. For a more detailed breakdown, <a href="http://jsperf.com/kreate-js-vs-jquery" target="_blank">check out the results</a> over on JSPerf.
+                    </p>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="4">
+                                    <h4>Creating an element with a class</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Code</th>
+                                <th>Ops/Sec</th>
+                                <th>Performance</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td><strong>Kreate</strong></td>
+                            <td>
+                                $.kreate({
+                                tag: 'div',
+                                class: 'hello'
+                            });
+                            </td>
+                            <td>139,815</td>
+                            <td>Faster!</td>
+                        </tr>
+                        <tr>
+                            <td>jQuery</td>
+                            <td>
+                                $('&lt;div class="hello">&lt;/div>');
+                            </td>
+                            <td>17,838</td>
+                            <td><strong>87% slower</strong></td>
+                        </tr>
+                        <thead>
+                            <tr>
+                                <th colspan="4">
+                                    <h4>Creating 10 elements</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Code</th>
+                                <th>Ops/Sec</th>
+                                <th>Performance</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td><strong>Kreate</strong></td>
+                            <td>
+                                $.kreate({
+                                    tag: 'li',
+                                    length: 10
+                                });
+                            </td>
+                            <td>66,254</td>
+                            <td>Faster!</td>
+                        </tr>
+                        <tr>
+                            <td>jQuery</td>
+                            <td>
+                                $('&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>');
+                            </td>
+                            <td>9,761</td>
+                            <td><strong>83% slower</strong></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>

@@ -6,13 +6,46 @@ html, body {
     text-rendering: optimizeLegibility;
 }
 
+a {
+    color: #c8236b;
+}
+
+a:hover {
+    color: #E2297A;
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong {
+    font-weight: 700;
+}
+
+h3 {
+    color: #c8236b;
+}
+
+h4 {
+    font-weight: normal;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
+.featurette {
+    background: #f5f5f5;
+    padding: 30px 15px;
+}
+
+.featurette.white {
+    background-color: white;
+}
+
+
 .logo {
-    margin: 0 auto 45px;
+    margin: 0 auto 30px;
 }
 
 .logo img {
@@ -23,22 +56,20 @@ img {
 .logo .logo-text h1 {
     color: #000;
     font-size: 3.8em;
-    font-weight: 700;
     letter-spacing: -1px;
 }
 
-.logo .logo-text h1 .thin {
-    font-weight: 300;
-}
-
 .logo .image-logo {
-    width: 150px;
+    width: 120px;
     margin-bottom: 15px;
 }
 
-.jumbotron.intro {
-    background-color: transparent;
-    padding: 60px 15px;
+.featurette pre {
+    background-color: #fff;
+}
+
+.featurette.white pre {
+    background-color: #f5f5f5;
 }
 
 .btn-kreate {
@@ -52,7 +83,7 @@ img {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f42d7d', endColorstr='#96006a',GradientType=1 ); /* IE6-9 */
     color: #fff;
     font-size: 1.25em;
-    padding: 12px 30px;
+    padding: 10px 30px;
     border: 3px solid #fff;
 }
 
