@@ -5,11 +5,11 @@ A tiny element creator plugin for jQuery.
 
 [Kreate vs jQuery Quick Performance Test.](http://jsperf.com/kreate-js-vs-jquery)
 
-### Requirements ###
+### Requirements
 - [jQuery](http://jquery.com/)
 - A can-do attitude!
 
-### How To Use ###
+### How To Use
 #### Downloading ####
 - Download the kreate.js file (located in dist/kreate.js) and add it to your project
 
