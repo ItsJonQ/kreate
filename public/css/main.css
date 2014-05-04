@@ -1,0 +1,60 @@
+html, body {
+    font-family: 'Source Sans Pro';
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    margin: 0 auto 45px;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+.logo .image-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.jumbotron.intro {
+    background-color: transparent;
+    padding: 60px 15px;
+}
+
+.btn-kreate {
+    -webkit-transform: all 0.2s ease;
+    background: #e6446b; /* Old browsers */
+    background: -moz-linear-gradient(left, #e6446b 0%, #a31f70 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#e6446b), color-stop(100%,#a31f70)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #e6446b 0%,#a31f70 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #e6446b 0%,#a31f70 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #e6446b 0%,#a31f70 100%); /* IE10+ */
+    background: linear-gradient(to right, #e6446b 0%,#a31f70 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6446b', endColorstr='#a31f70',GradientType=1 ); /* IE6-9 */
+    color: #fff;
+    font-size: 1.25em;
+    padding: 15px 30px;
+    border: 3px solid #fff;
+}
+
+.btn-kreate:focus {
+    color: #fff;
+}
+
+.btn-kreate:hover {
+    background: transparent;
+    color: #b11a61;
+    border-color: #b11a61;
+}
+
+.btn-kreate:active {
+    background: #b11a61;
+    color: #fff;
+    box-shadow: none;
+    border-color: #b11a61;
+}

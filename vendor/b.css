@@ -1,0 +1,507 @@
+/*!
+ * Lil' B - Bootstrap
+ * A Bootstrap for Bootstrap
+ * v1.0.1 (http://itsjonq.github.io/lil-b/)
+ * Copyright 2014 Jon Q
+ * Licensed under MIT (https://github.com/itsjonq/lil-b/blob/master/LICENSE)
+ */
+
+/**
+ * Bootstrap - Lil' B
+ * Typography
+ */
+
+/**
+ * Typography - Base
+ * This (re)sets the font-size and line-height for the site. If the font-size
+ * is changed, all of the other fonts will respond/adjust appropriately.
+ */
+body {
+    font-size: 16px;                /* Adjust this if needed */
+    line-height: 1.65em;
+}
+
+
+/**
+ * Typography - Color Adjustments
+ * The recommended colors are listed below under their selectors. They are
+ * commented out by default.
+ *
+ * It is recommended that the darkest color are the headers, followed by the
+ * "lead", then the standard body text to help with separation and readibility.
+ */
+
+body {
+    /*color: #444;*/
+}
+
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, h6, .h6 {
+    /*color: #222;*/
+}
+
+.lead {
+    /*color: #333;*/
+}
+
+
+/**
+ * Typography + Spacing Adjustments
+ * Adjusts the typography in Bootstrap to work off of responsive ems instead
+ * of pixels. If the user changes the font-size in body, all of the headers
+ * (h1, h2, h3, h4, h5, h6) and other text elements will respond accordingly
+ * with appropriate line-height and margin spacing.
+ */
+
+h1, .h1 {
+    font-size: 2.6em;
+}
+
+h2, .h2 {
+    font-size: 2.15em;
+}
+
+h3, .h3 {
+    font-size: 1.7em;
+}
+
+h4, .h4 {
+    font-size: 1.25em;
+}
+
+h5, .h5 {
+    font-size: 1em;
+}
+
+h6, .h6 {
+    font-size: 0.85em;
+}
+
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2em;
+}
+
+pre {
+    font-size: 0.9em;
+}
+
+.lead {
+    font-size: 1.5em;
+    margin-bottom: 0.85em;
+}
+
+blockquote {
+    font-size: 1.25em;              /* Same size as h4 */
+}
+
+p {
+    margin-bottom: 1.65em;
+}
+
+.highlight {
+    margin-bottom: 1.65em;
+}
+
+address,
+legend,
+.alert,
+.breadcrumb,
+.flex-video,
+.form-group,
+.jumbotron p,
+.list-group,
+.progress,
+.table,
+.well {
+    margin-bottom: 1.5em;
+}
+
+/*List-based selectors are separated*/
+dt,
+ul,
+ol {
+    margin-bottom: 1.5em;
+}
+
+/*Adding margin-top offset to lists if followed by a paragraph for even spacing*/
+p + dt,
+p + ul,
+p + ol {
+    margin-top: -0.15em;
+}
+
+
+/**
+ * Bootstrap - Lil' B
+ * Optimize
+ */
+
+/**
+ * Affix Fix
+ * This implements the translateZ(0) "hack" to affix elements. This prevents
+ * re-paints on scrolls, which helps with performance and overall page
+ * smoothness.
+ */
+
+.affix {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+
+/**
+ * Navbar Fix
+ * This implements the translateZ(0) "hack" to affix elements. This prevents
+ * re-paints on scrolls, which helps with performance and overall page
+ * smoothness.
+ */
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+
+/**
+ * Modal Fix (Fixes repaint on scroll)
+ * This adjusts the transform property which fixes browser repaint on
+ * scrolling / resizing. Using translat3d, it retains the 25% top animation
+ * on load.
+ */
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transform: translate3d(0, 25%, 0);
+    -moz-transform: translate3d(0, 25%, 0);
+    -ms-transform: translate3d(0, 25%, 0);
+    -o-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+}
+
+
+/**
+ * Modal Fix (Allowing Positioning)
+ * This removes the transition/translate properties in the modal, allowing
+ * for elements within the modal to be "position: fixed" if needed.
+ *
+ * NOTE: This is commented out by default. Due to how translate works, you
+ * can only have translate OR a working position: fixed.. you can't have both.
+ * Hopefully this will be fixed in the next version of CSS?
+ *
+ * If you wish to use position: fixed inside of your modal (such as having a
+ * scrollspy sticky nav), you have to uncomment this, and comment out / remove
+ * the modal fix above.
+ */
+
+/*
+.modal.in .modal-dialog,
+.modal.fade .modal-dialog {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+*/
+
+/**
+ * Bootstrap - Lil' B
+ * Control
+ */
+
+/**
+ * Border Control
+ * This groups all of the elements in Bootsrap with borders.
+ * This allows for the user to quickly adjust the border for applicable
+ * elements if needed.
+ */
+
+.img-thumbnail,
+.list-group-item,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus,
+.nav-tabs-justified > .active > a,
+.nav-tabs-justified > .active > a:hover,
+.nav-tabs-justified > .active > a:focus,
+.pager li > a,
+.pager li > span,
+.pagination > li > a,
+.pagination > li > span,
+.table-bordered,
+.table-bordered th,
+.table-bordered td,
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td,
+.table-responsive,
+.thumbnail {
+    border: 1px solid #ddd;
+}
+
+/*These selectors / classes have slightly darker borders by default*/
+pre,
+.dropdown-menu,
+.form-control,
+.input-group-addon,
+.popover {
+    border: 1px solid #ccc;
+}
+
+
+/**
+ * Border-Radius Control
+ * This groups all of the elements in Bootsrap with a border-radius.
+ * This allows for the user to quickly adjust the border-radius for applicable
+ * elements if needed.
+ */
+
+btn,
+code,
+input,
+kbd,
+pre,
+.alert,
+.breadcrumb,
+.btn,
+.btn-lg,
+.btn-group-lg>.btn,
+.btn-sm,
+.btn-group-sm > .btn,
+.btn-xs,
+.btn-group-xs > .btn,
+.container .jumbotron,
+.color-swatch,
+.dropdown-menu,
+.form-control,
+.highlight,
+.input-lg,
+.input-sm,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn,
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .btn,
+.input-group-addon,
+.input-group-addon.input-sm,
+.input-group-addon.input-lg,
+.img-thumbnail,
+.modal-content,
+.navbar,
+.navbar-toggle,
+.nav-pills > li > a,
+.nav-tabs > li > a,
+.nav-tabs-justified > li > a
+.panel-group .panel,
+.popover,
+.progress,
+.responsive-utilities-test span,
+.thumbnail,
+.tooltip-inner,
+.well,
+.well-lg,
+.well-sm {
+    border-radius: 0px;             /* Adjust this if needed */
+}
+
+/*Resets .nav-tabs links to zero after being defined above*/
+.nav-tabs > li > a {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+
+/**
+ * Button Style Control (Flat)
+ * This styles below give buttons a "flat" look when they are active/pressed.
+ * These styles are disabled/commented out by default.
+ */
+
+/*
+.btn:active,
+.btn.active,
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: inset 0 3px 0px rgba(0, 0, 0, .125);
+    -moz-box-shadow: inset 0 3px 0px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 0px rgba(0, 0, 0, .125);
+}
+*/
+
+
+/**
+ * Bootstrap - Lil' B
+ * Helpers
+ */
+
+/**
+ * Helper Classes
+ * @additional
+ * @helper
+ */
+
+
+/**
+ * .col-solo
+ * This is designed to be added to "column" sized elements where you wish to have
+ * a desired size (e.g. col-md-8 for width of 66.6667%), but you don't it to float
+ * or to have any elements next to it.
+ *
+ * This is useful for single-page type layouts where content blocks need to
+ * be slightly narrower instead of col-md-12 or container width
+ * (default-max 1170px)
+ *
+ * Example:
+ * <div class="container">
+ *     <div class="col-md-8 col-solo">
+ *         Content here
+ *     </div>
+ * </div>
+ */
+
+.col-solo {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**
+ * .flex-video
+ * This helper class allows for video embeds to be responsive. Just add your video embed inside of a parent .flex-video div.
+ *
+ * Most videos these days have a 16:9 (HD) ratio. If your video embed is of a 4:3 (SD) ratio, add .sd along with the .flex-video class.
+ *
+ * High-Depth ratio videos (16:9)
+ * <div class="flex-video">
+ *     * Insert video embed here *
+ * </div>
+ *
+ * Standard-Depth ratio videos (4:3)
+ * <div class="flex-video.sd">
+ *     * Insert video embed here *
+ * </div>
+ *
+ * This helper was inspired by the .flex-video helper found in Foundation:
+ * @source: http://foundation.zurb.com/docs/components/flex_video.html
+ */
+
+.flex-video {
+    height: 0;
+    margin-bottom: 1.5em;
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.flex-video embed,
+.flex-video iframe,
+.flex-video object,
+.flex-video video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.flex-video.sd {
+    padding-top: 75%;
+}
+
+
+/**
+ * .fixed-z
+ * This helper class adds the "translateZ" hack for selectors that are set
+ * as position: fixed to help prevent brower repaints on browser scrolls/resize.
+ */
+
+.fixed-z {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/**
+ * .no-select
+ * This helper class disables selection for selectors. This is handy for
+ * navigations, links, headers, buttons, etc..
+ */
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/**
+ * .text-lowercase
+ * This helper class transforms the text within to all lowercase.
+ */
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+/**
+ * .text-uppercase
+ * This helper class transforms the text within to all uppercase / uppercase.
+ */
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/**
+ * .v-center
+ * This helper class helps vertically align elements.
+ * In order to get .v-center to work properly, you have to have a child
+ * .v-center within the parent .v-center-wrap selector.
+ *
+ * It is recommended that you add some sort of height to your .v-center selector
+ * to get the desired effect.
+ *
+ * Example:
+ * <div class="v-center-wrap text-center">
+ *     <div class="v-center">
+ *         <h3>I'm vertically aligned!</h3>
+ *     </div>
+ * </div>
+ *
+ */
+
+.v-center-wrap {
+    display: table;
+    width: 100%;
+}
+
+.v-center {
+    display: table-cell;
+    vertical-align: middle;
+}
