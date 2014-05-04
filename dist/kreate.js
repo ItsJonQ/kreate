@@ -56,6 +56,7 @@
         settings = $.extend({
             tag: tagName,
             id: "",
+            attr: {},
             content: "",
             class: "",
             length: 1,
@@ -84,16 +85,20 @@
          * Creating and pushing the elements to the els array to output
          * the jQuery object
          */
+        // Defining the attributes
+        var attr = settings.attr;
+
         // Defining the loop variables
         var i = 0;
         var len = settings.length;
 
         for( ; i < len; i++) {
-
+            // Creating the element
             var el = document.createElement(settings.tag);
+
             // Set the class
             if(settings.class) {
-                el.class = settings.class;
+                el.className = settings.class;
             }
             // Set the ID
             if(settings.id) {
@@ -103,18 +108,30 @@
                     el.id = settings.id;
                 }
             }
+            // Set the attributes
+            if(typeof attr === "object" && !$.isEmptyObject(attr)) {
+                // Looping through the settings.attr
+                for(var key in attr) {
+                    // if attr has a valid property of key
+                    if (attr.hasOwnProperty(key)) {
+                        // Set the attribute on el
+                        el.setAttribute(key, attr[key]);
+                    }
+                }
+            }
             // Adding the Content
             if(settings.content && typeof settings.content === "string") {
                 // Setting the innerHTML of the el
                 el.innerHTML = settings.content;
             }
+
             // Push it to els array
             els.push(el);
         }
 
 
         /**
-         * Outputing jQuery Object
+         * Outputting jQuery Object
          * Returning the jQuery object with the generated elements
          */
         // Return jQuery object if els array has elements in it
