@@ -11,7 +11,7 @@ A tiny element creator plugin for jQuery.
 
 ## How To Use
 #### Downloading ####
-- Download the kreate.js file (located in dist/kreate.js) and add it to your project
+Download the kreate.js file (located in dist/kreate.js) and add it to your project
 
 #### Installing from Bower #####
 To install it using [Bower](http://bower.io/) with this command:
@@ -25,4 +25,18 @@ Once you've got the files, load up Kreate **after** you add jQuery to your proje
 ```
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="kreate.js"></script>
+```
+
+## Options
+**Example**
+```
+$.kreate({
+    tag: 'div',
+    class: 'classname',
+    length: 15,
+    id: 'post',
+    uniqueId: true,
+    startId: 1,
+    output: 'jQuery'
+});
 ```
