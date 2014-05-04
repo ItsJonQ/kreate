@@ -71,6 +71,12 @@
             settings.length = 1;
         }
 
+        // Ensure that the startId is a number
+        if(typeof settings.startId !== "number") {
+            // Set the startId as 1 as default
+            settings.startId = 1;
+        }
+
         // Convert the settings.output to lowercase
         settings.output = settings.output.toLowerCase();
         // Ensuring settings.output is set properly
@@ -102,7 +108,7 @@
             }
             // Set the ID
             if(settings.id) {
-                if(len > 1 && settings.uniqueId) {
+                if(len > 1 && settings.uniqueId === true) {
                     el.id = settings.id + "-" + (settings.startId + i);
                 } else {
                     el.id = settings.id;
