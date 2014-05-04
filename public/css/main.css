@@ -1,5 +1,9 @@
 html, body {
     font-family: 'Source Sans Pro';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 img {
@@ -16,6 +20,17 @@ img {
     margin: 0 auto;
 }
 
+.logo .logo-text h1 {
+    color: #000;
+    font-size: 3.8em;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo .logo-text h1 .thin {
+    font-weight: 300;
+}
+
 .logo .image-logo {
     width: 150px;
     margin-bottom: 15px;
@@ -27,17 +42,17 @@ img {
 }
 
 .btn-kreate {
-    background: #eb3466; /* Old browsers */
-    background: -moz-linear-gradient(left,  #eb3466 0%, #82165e 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eb3466), color-stop(100%,#82165e)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  #eb3466 0%,#82165e 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  #eb3466 0%,#82165e 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  #eb3466 0%,#82165e 100%); /* IE10+ */
-    background: linear-gradient(to right,  #eb3466 0%,#82165e 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb3466', endColorstr='#82165e',GradientType=1 ); /* IE6-9 */
+    background: #f42d7d; /* Old browsers */
+    background: -moz-linear-gradient(left,  #f42d7d 0%, #96006a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f42d7d), color-stop(100%,#96006a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #f42d7d 0%,#96006a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #f42d7d 0%,#96006a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #f42d7d 0%,#96006a 100%); /* IE10+ */
+    background: linear-gradient(to right,  #f42d7d 0%,#96006a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f42d7d', endColorstr='#96006a',GradientType=1 ); /* IE6-9 */
     color: #fff;
     font-size: 1.25em;
-    padding: 15px 30px;
+    padding: 12px 30px;
     border: 3px solid #fff;
 }
 
