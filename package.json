@@ -1,6 +1,6 @@
 {
   "name": "kreate.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A tiny element creator plugin for jQuery. This plugin was inspired by the .create() method from the Zest.js library.",
   "main": "dist/kreate.js",
   "scripts": {

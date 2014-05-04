@@ -36,27 +36,17 @@
          */
         var settings;
         // Defining the default tagName
-        var tag = "div";
+        var tagName = "div";
 
         // Define the settins if the options is a string
         if(isString) {
-            // If options contains spaces, <, >, =, or .
-            if( options.indexOf(" ") >= 0 ||
-                options.indexOf("<") >= 0 ||
-                options.indexOf(">") >= 0 ||
-                options.indexOf("=") >= 0 ||
-                options.indexOf(".") >= 0 )
-            {
-                // Return and execute jQuery init
-                return this(options);
-            }
-            // Update tag with options
-            tag = options;
+            // Return and execute jQuery init
+            return this(options);
         }
 
         // Define the settings
         settings = $.extend({
-            tagName: tag,
+            tag: tagName,
             id: "",
             content: "",
             class: "",
@@ -92,7 +82,7 @@
 
         for( ; i < len; i++) {
 
-            var el = document.createElement(settings.tagName);
+            var el = document.createElement(settings.tag);
             // Set the class
             if(settings.class) {
                 el.class = settings.class;
@@ -143,7 +133,7 @@
 
         } else {
             // Return jQuery
-            return this;
+            return this(options);
         }
 
     };
