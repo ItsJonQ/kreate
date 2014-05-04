@@ -29,7 +29,7 @@
   "homepage": "https://github.com/ItsJonQ/kreate",
   "bugs": {
     "url": "https://github.com/ItsJonQ/kreate/issues"
-  }
+  },
   "devDependencies": {
     "grunt-cli": "~0.1.13",
     "grunt": "~0.4.4",
