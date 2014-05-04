@@ -28,13 +28,13 @@ img {
 
 .btn-kreate {
     background: #eb3466; /* Old browsers */
-    background: -moz-linear-gradient(left,  #eb3466 0%, #931ca0 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eb3466), color-stop(100%,#931ca0)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  #eb3466 0%,#931ca0 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  #eb3466 0%,#931ca0 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  #eb3466 0%,#931ca0 100%); /* IE10+ */
-    background: linear-gradient(to right,  #eb3466 0%,#931ca0 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb3466', endColorstr='#931ca0',GradientType=1 ); /* IE6-9 */
+    background: -moz-linear-gradient(left,  #eb3466 0%, #82165e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eb3466), color-stop(100%,#82165e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #eb3466 0%,#82165e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #eb3466 0%,#82165e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #eb3466 0%,#82165e 100%); /* IE10+ */
+    background: linear-gradient(to right,  #eb3466 0%,#82165e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb3466', endColorstr='#82165e',GradientType=1 ); /* IE6-9 */
     color: #fff;
     font-size: 1.25em;
     padding: 15px 30px;
