@@ -233,3 +233,9 @@ The variable "a" should equal
 
 ## Have Fun!
 That's it! There isn't really much to it. Any and all feedback is welcome! Good luck and have fun **Kreating** :).
+
+## Creator
+#### Jon Q
+- [http://www.jonquach.com](http://www.jonquach.com)
+- [http://www.twitter.com/itsjonq](http://www.twitter.com/itsjonq)
+- [https://github.com/ItsJonQ/kreate/](https://github.com/ItsJonQ/kreate/)
