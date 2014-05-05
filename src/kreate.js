@@ -40,7 +40,7 @@
          * id, and class to create a single element
          * @type {RegExp}
          */
-        var _selectorRegex = /#([\w-]+)|\.([\w-]+)$/;
+        var _selectorRegex = /#([\w-]+)|\.([\w-]+)/;
 
         /**
          * Defining the settings
@@ -72,6 +72,8 @@
             // Regex breakdown for $.kreate('div#id.classname');
             // ["div", "id", undefined, "", undefined, "classname", ""]
 
+            // Setting options as object, and passing parsed selector, class,
+            // id, and length
             options = {
                 tag: match[0] ? match[0] : tagName,
                 id: match[1] ? match[1] : null,
