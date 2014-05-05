@@ -3,7 +3,7 @@ A tiny element creator plugin for jQuery.
 
 <img src="https://raw.githubusercontent.com/ItsJonQ/kreate/master/images/kreate-logo.png">
 
-Kreate is a tiny helper method for jQuery that can quickly generate DOM elements as a standard jQuery object. You can use Kreate to create a single DOM element (such as a div), up to however many elements your browser can handle before crashing*.
+Kreate is a tiny helper method for jQuery that can quickly generate DOM elements as a standard jQuery object. You can use Kreate to create a single DOM element (such as a div) or up to however many elements your browser can handle before crashing*.
 
 \* I was able to generate 10 million elements. I tried 1 billion once, but Chrome crashed :(
 
@@ -234,7 +234,7 @@ The variable "a" should equal
 ## Have Fun!
 That's it! There isn't really much to it. Any and all feedback is welcome! Good luck and have fun **Kreating** :).
 
-## Creator
+## "Kreator" ( Get it? No? Fine.. ;) )
 #### Jon Q
 - [http://www.jonquach.com](http://www.jonquach.com)
 - [http://www.twitter.com/itsjonq](http://www.twitter.com/itsjonq)
