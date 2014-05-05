@@ -157,6 +157,40 @@
                             <td>9,761</td>
                             <td><strong>83% slower</strong></td>
                         </tr>
+                        <thead>
+                            <tr>
+                                <th colspan="4">
+                                    <h4>Creating 10 elements, then <a href="http://jsperf.com/kreate-js-vs-jquery/2" target="_blank">appending</a> them</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Code</th>
+                                <th>Ops/Sec</th>
+                                <th>Performance</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td><strong>Kreate</strong></td>
+                            <td>
+                                $div.append( $.kreate({
+                                    tag: 'li',
+                                    length: 10
+                                }) );
+                            </td>
+                            <td>9,764</td>
+                            <td>Not bad!</td>
+                        </tr>
+                        <tr>
+                            <td>jQuery</td>
+                            <td>
+                                $div.append( $('&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>&lt;li>&lt;/li>') );
+                            </td>
+                            <td>6,474</td>
+                            <td><strong>32% slower</strong></td>
+                        </tr>
                     </table>
                 </div>
             </div>
