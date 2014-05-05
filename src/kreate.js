@@ -8,7 +8,7 @@
     var kreate;
 
     // Defining kreate
-    kreate = function(options, length) {
+    kreate = function(options, length, output) {
 
         var isString = typeof options === "string";
         var isObject = typeof options === "object";
@@ -50,6 +50,15 @@
         // Defining the default tagName
         var tagName = "div";
 
+
+        /**
+         * "Quick" Kreation Parsing
+         * This allows the user to quickly Kreate elements using a string as
+         * the options argument instead of an object.
+         *
+         * Example: $.kreat('div.thumbnail');
+         */
+
         // Define the settings if the options is a string
         if(isString) {
             // If the string contains a space
@@ -69,8 +78,10 @@
                 class: match[2] ? match[2] : match[5],
                 length: (length && typeof length === "number") ? length : 1
             };
-
         }
+
+        // Setting the options object output if applicable
+        options.output = (output && typeof output === "string") ? output : "jquery";
 
         // Define the settings
         settings = $.extend({
@@ -100,8 +111,9 @@
         // Convert the settings.output to lowercase
         settings.output = settings.output.toLowerCase();
         // Ensuring settings.output is set properly
-        if( !(settings.output === "jquery" ||
-            settings.output === "html") ) {
+        if( !(  settings.output === "jquery" ||
+                settings.output === "html" ||
+                settings.output === "array" ) ) {
             settings.output = "jquery";
         }
 
