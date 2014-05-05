@@ -48,7 +48,7 @@
                         <h2>What is <strong>Kreate</strong>?</h2>
                     </header>
                     <p class="lead">
-                        Kreate is a tiny helper method for jQuery that can quickly generate DOM elements as a standard <strong>jQuery object</strong>. You can use Kreate to create a single DOM element (such as a &lt;div&gt;), up to however many elements your browser can handle before crashing*.
+                        Kreate is a tiny helper method for jQuery that can quickly generate DOM elements as a standard <strong>jQuery object</strong>. You can use Kreate to create a single DOM element (such as a &lt;div&gt;), or up to however many elements your browser can handle before crashing*.
                     </p>
                     <p><small>* I was able to generate 10 million elements. I tried 1 billion once, but Chrome crashed :(</small></p>
 
@@ -62,7 +62,6 @@
                     <pre><code>bower install kreate</code></pre>
 
                     <p>Load it up <strong>after</strong> jQuery, and you should be good to go!</p>
-                    <h4>Example</h4>
                     <div class="highlight">
 <pre><code>&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="js/kreate.min.js"&gt;&lt;/script&gt;
@@ -88,6 +87,7 @@
                         Below are a couple of performance test results. For a more detailed breakdown, <a href="http://jsperf.com/kreate-js-vs-jquery" target="_blank">check out the results</a> over on JSPerf.
                     </p>
 
+                    <h3>Performance Tests</h3>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -147,7 +147,7 @@
                                 });
                             </td>
                             <td>66,254</td>
-                            <td>Faster!</td>
+                            <td>Look at it go!</td>
                         </tr>
                         <tr>
                             <td>jQuery</td>
@@ -162,6 +162,78 @@
             </div>
         </div>
     </section>
+
+    <!-- Section: Get Kreative -->
+    <section class="featurette">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-solo">
+                    <header class="text-center">
+                        <h2>Get <strong>Kreative</strong></h2>
+                    </header>
+                    <p class="lead">
+                        Kreating elements is easy as pie! It's probably <em>easier</em> than pie, as <a href="images/pie-fail.jpg" target="_blank"><strong>baking pie is quite hard</strong></a>.
+                    </p>
+
+                    <p>
+                        To start <strong>kreating</strong>, just use this snippet below:
+                    </p>
+                    <pre><code>$.kreate();</code></pre>
+
+                    <P>There are a handful of options that can customize and fancify your elements. Because you're a boss, you can <a href="https://github.com/ItsJonQ/kreate#options" target="_blank"><strong>learn more</strong></a> about the various options by checking out on Github.</p>
+
+<pre><code>$.kreate({
+    tag: 'div',
+    class: 'classname',
+    length: 5,
+    id: 'post',
+    attr: {
+        'data-lazy': true
+    }
+});
+</code></pre>
+
+                    <p>That baller of a snippet above should render these elements:</p>
+<pre><code>&lt;div id="post-1" data-lazy="true" class="classname">&lt;/div>
+&lt;div id="post-2" data-lazy="true" class="classname">&lt;/div>
+&lt;div id="post-3" data-lazy="true" class="classname">&lt;/div>
+&lt;div id="post-4" data-lazy="true" class="classname">&lt;/div>
+&lt;div id="post-5" data-lazy="true" class="classname">&lt;/div>
+</code></pre>
+                    <p class="text-center">
+                        <a href="https://github.com/ItsJonQ/kreate#options" class="btn btn-kreate bordered" title="Download Kreate">Learn More About This Magic</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featurette white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-solo">
+                    <header class="text-center">
+                        <h2>Start <strong>Kreating</strong></h2>
+                    </header>
+                    <p class="lead">
+                        Go on! You have all the tools. You got your jQuery, your hard hat with a light on it, and your favorite pair of yellow rainboots. What are you waiting for?
+                    </p>
+                    <p class="lead">
+                        Start Kreating stuff. <a href="https://www.youtube.com/watch?v=nviA72Lfio8" target="_blank">Adventure is out there</a>!
+                    </p>
+                    <p class="text-center">
+                        <a href="https://github.com/ItsJonQ/kreate" class="btn btn-kreate" title="Download Kreate">Start Kreating Today</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <footer class="featurette white text-center">
+        <small>Built by <strong><a href="http://www.jonquach.com/" target="_blank">Q</a></strong>. 2014.</small>
+    </footer>
 
 </body>
 </html>

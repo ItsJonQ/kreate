@@ -93,6 +93,12 @@ table {
     border: 3px solid #fff;
 }
 
+.btn-kreate.bordered {
+    background: transparent;
+    border-color: #96006a;
+    color: #96006a;
+}
+
 .btn-kreate:focus {
     color: #fff;
 }
