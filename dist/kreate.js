@@ -29,11 +29,6 @@
         }
 
         /**
-         * @source jQuery
-         * @type { RegExp }
-         */
-
-        /**
          * els
          * This is the array/collection were the generated HTML elements
          * will be pushed to.
