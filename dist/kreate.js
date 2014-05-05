@@ -29,6 +29,11 @@
         }
 
         /**
+         * @source jQuery
+         * @type { RegExp }
+         */
+
+        /**
          * els
          * This is the array/collection were the generated HTML elements
          * will be pushed to.
@@ -37,6 +42,7 @@
          */
         var els = [];
 
+        var _selectorRegex = /#([\w-]+)|\.([\w-]+)$/;
 
         /**
          * Defining the settings
@@ -48,8 +54,21 @@
 
         // Define the settins if the options is a string
         if(isString) {
-            // Return and execute jQuery init
-            return this(options);
+            if(options.indexOf(" ") >= 0) {
+                // Return and execute jQuery init
+                return this(options);
+            }
+
+            var match = options.split(_selectorRegex);
+            // ["div", "id", undefined, "", undefined, "classname", ""]
+
+            var _selector = match[0];
+            var _id = match[1];
+            var _class = match[2] ? match[2] : match[5];
+
+            // Else, return an empty object
+            return [];
+
         }
 
         // Define the settings

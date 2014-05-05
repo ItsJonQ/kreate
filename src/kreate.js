@@ -16,9 +16,14 @@
         // Options must be defined
         // Options must be either a string or an object
         if( !options && !( isString || isObject ) ) {
-            // Return and execute jQuery init
-            return this(options);
+            // Return a jQuery object with a div
+            return $(document.createElement('div'));
         }
+
+        /**
+         * @source jQuery
+         * @type { RegExp }
+         */
 
         /**
          * els
@@ -29,6 +34,13 @@
          */
         var els = [];
 
+        /**
+         * _selectorRegex
+         * This is used to parse a string to determine the selector,
+         * id, and class to create a single element
+         * @type {RegExp}
+         */
+        var _selectorRegex = /#([\w-]+)|\.([\w-]+)$/;
 
         /**
          * Defining the settings
@@ -38,10 +50,37 @@
         // Defining the default tagName
         var tagName = "div";
 
-        // Define the settins if the options is a string
+        // Define the settings if the options is a string
         if(isString) {
-            // Return and execute jQuery init
-            return this(options);
+            // If the string contains a space
+            if(options.indexOf(" ") >= 0) {
+                // Return and execute jQuery init
+                return this(options);
+            }
+
+            // Regex the options using .split
+            var match = options.split(_selectorRegex);
+            // Regex breakdown for $.kreate('div#id.classname');
+            // ["div", "id", undefined, "", undefined, "classname", ""]
+
+            // Defining the selector, id, and class
+            var _selector = match[0] ? match[0] : 'div';
+            var _id = match[1];
+            var _class = match[2] ? match[2] : match[5];
+
+            // Creating the element
+            var el = document.createElement(_selector);
+            // Adding the ID
+            if(_id) {
+                el.id = _id;
+            }
+            // Adding the class
+            if(_class) {
+                el.className = _class;
+            }
+
+            // Return the element as a jQuery object
+            return $(el);
         }
 
         // Define the settings
