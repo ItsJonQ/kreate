@@ -8,7 +8,7 @@
     var kreate;
 
     // Defining kreate
-    kreate = function(options) {
+    kreate = function(options, length) {
 
         var isString = typeof options === "string";
         var isObject = typeof options === "object";
@@ -17,7 +17,7 @@
         // Options must be either a string or an object
         if( !options && !( isString || isObject ) ) {
             // Return a jQuery object with a div
-            return $(document.createElement('div'));
+            return this(document.createElement('div'));
         }
 
         /**
@@ -63,24 +63,13 @@
             // Regex breakdown for $.kreate('div#id.classname');
             // ["div", "id", undefined, "", undefined, "classname", ""]
 
-            // Defining the selector, id, and class
-            var _selector = match[0] ? match[0] : 'div';
-            var _id = match[1];
-            var _class = match[2] ? match[2] : match[5];
+            options = {
+                tag: match[0] ? match[0] : tagName,
+                id: match[1] ? match[1] : null,
+                class: match[2] ? match[2] : match[5],
+                length: (length && typeof length === "number") ? length : 1
+            };
 
-            // Creating the element
-            var el = document.createElement(_selector);
-            // Adding the ID
-            if(_id) {
-                el.id = _id;
-            }
-            // Adding the class
-            if(_class) {
-                el.className = _class;
-            }
-
-            // Return the element as a jQuery object
-            return $(el);
         }
 
         // Define the settings
@@ -175,9 +164,10 @@
         if(els.length > 0) {
             // Return the jQuery object with the newly created elements
             if(settings.output === "jquery") {
-                return $(els);
+                return this(els);
             }
 
+            // Return the HTML string of newly created elements
             if(settings.output === "html") {
                 // Defining HTML
                 var html = "";
@@ -191,6 +181,12 @@
                 }
                 // Return the HTML
                 return html;
+            }
+
+            // Return the newly created elements as an array
+            if(settings.output === "array") {
+                // Return the array
+                return els;
             }
 
         } else {

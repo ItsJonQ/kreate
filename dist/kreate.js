@@ -16,7 +16,7 @@
     var kreate;
 
     // Defining kreate
-    kreate = function(options) {
+    kreate = function(options, length) {
 
         var isString = typeof options === "string";
         var isObject = typeof options === "object";
@@ -24,8 +24,8 @@
         // Options must be defined
         // Options must be either a string or an object
         if( !options && !( isString || isObject ) ) {
-            // Return and execute jQuery init
-            return this(options);
+            // Return a jQuery object with a div
+            return this(document.createElement('div'));
         }
 
         /**
@@ -42,6 +42,12 @@
          */
         var els = [];
 
+        /**
+         * _selectorRegex
+         * This is used to parse a string to determine the selector,
+         * id, and class to create a single element
+         * @type {RegExp}
+         */
         var _selectorRegex = /#([\w-]+)|\.([\w-]+)$/;
 
         /**
@@ -52,22 +58,25 @@
         // Defining the default tagName
         var tagName = "div";
 
-        // Define the settins if the options is a string
+        // Define the settings if the options is a string
         if(isString) {
+            // If the string contains a space
             if(options.indexOf(" ") >= 0) {
                 // Return and execute jQuery init
                 return this(options);
             }
 
+            // Regex the options using .split
             var match = options.split(_selectorRegex);
+            // Regex breakdown for $.kreate('div#id.classname');
             // ["div", "id", undefined, "", undefined, "classname", ""]
 
-            var _selector = match[0];
-            var _id = match[1];
-            var _class = match[2] ? match[2] : match[5];
-
-            // Else, return an empty object
-            return [];
+            options = {
+                tag: match[0] ? match[0] : tagName,
+                id: match[1] ? match[1] : null,
+                class: match[2] ? match[2] : match[5],
+                length: (length && typeof length === "number") ? length : 1
+            };
 
         }
 
@@ -163,9 +172,10 @@
         if(els.length > 0) {
             // Return the jQuery object with the newly created elements
             if(settings.output === "jquery") {
-                return $(els);
+                return this(els);
             }
 
+            // Return the HTML string of newly created elements
             if(settings.output === "html") {
                 // Defining HTML
                 var html = "";
@@ -179,6 +189,12 @@
                 }
                 // Return the HTML
                 return html;
+            }
+
+            // Return the newly created elements as an array
+            if(settings.output === "array") {
+                // Return the array
+                return els;
             }
 
         } else {
