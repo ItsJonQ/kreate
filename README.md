@@ -64,7 +64,7 @@ $.kreate({
 });
 ```
 
-Learn more about these methods by checking out [http://itsjonq.github.io/kreate/#kreating-101](Kreating 101).
+Learn more about these methods by checking out [Kreating 101](http://itsjonq.github.io/kreate/#kreating-101).
 
 
 ## Options
