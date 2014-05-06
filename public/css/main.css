@@ -26,7 +26,11 @@ h3 {
 }
 
 h4 {
-    font-weight: normal;
+    font-weight: bold;
+}
+
+h5 {
+    font-weight: bold;
 }
 
 img {
@@ -53,6 +57,16 @@ table {
     background-color: white;
 }
 
+.featurette article {
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #ccc;
+}
+
+.featurette article.last {
+    border: none;
+    padding: 0;
+}
 
 .logo {
     margin: 0 auto 30px;
@@ -118,4 +132,41 @@ table {
     color: #fff;
     box-shadow: none;
     border-color: #c8236b;
+}
+
+
+/* code for animated blinking cursor */
+#typed-cursor{
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-ms-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

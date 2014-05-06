@@ -58,7 +58,7 @@
                     </p>
 
                     <h4>Installing with Bower</h4>
-                    <p><a href="http://bower.io/" target="_blank">Bower</a> is awesome. If you're using Bower, you can download/install Kreate with the follow command line:</p>
+                    <p><a href="http://bower.io/" target="_blank">Bower</a> is awesome. If you're using Bower, you can download/install Kreate with the following command line:</p>
                     <pre><code>bower install kreate</code></pre>
 
                     <p>Load it up <strong>after</strong> jQuery, and you should be good to go!</p>
@@ -107,10 +107,7 @@
                         <tr>
                             <td><strong>Kreate</strong></td>
                             <td>
-                                $.kreate({
-                                tag: 'div',
-                                class: 'hello'
-                            });
+                                $.kreate('div.hello');
                             </td>
                             <td>139,815</td>
                             <td>Faster!</td>
@@ -141,10 +138,7 @@
                         <tr>
                             <td><strong>Kreate</strong></td>
                             <td>
-                                $.kreate({
-                                    tag: 'li',
-                                    length: 10
-                                });
+                                $.kreate('li', 10);
                             </td>
                             <td>66,254</td>
                             <td>Look at it go!</td>
@@ -175,10 +169,7 @@
                         <tr>
                             <td><strong>Kreate</strong></td>
                             <td>
-                                $div.append( $.kreate({
-                                    tag: 'li',
-                                    length: 10
-                                }) );
+                                $div.append( $.kreate('li', 10) );
                             </td>
                             <td>9,764</td>
                             <td>Not bad!</td>
@@ -197,58 +188,195 @@
         </div>
     </section>
 
-    <!-- Section: Start Kreating -->
-    <section class="featurette">
+    <!-- Section: Kreating 101 -->
+    <section class="featurette" id="kreating-101">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-solo">
                     <header class="text-center">
-                        <h2>Start <strong>Kreating</strong></h2>
+                        <h2><strong>Kreating</strong> 101</h2>
                     </header>
-                    <p class="lead">
-                        Kreating elements is easy as pie! It's probably <em>easier</em> than pie since baking pie is <a href="images/pie-fail.jpg" target="_blank"><strong>quite hard</strong></a>.
-                    </p>
+                    <p class="lead">Welcome to the tutorial portion of Kreate! Below are a some snippets and guides to help you become a master of kreation. Are you ready? Of course you are. You were <em>born</em> ready. You were born awesome.</p>
 
-                    <p>
-                        To start <strong>kreating</strong>, just use this snippet below:
-                    </p>
-                    <pre><code>$.kreate();</code></pre>
+                    <article id="tut-basics">
+                        <h3>1. The Basics</h3>
+                        <p>To Kreate something, just enter in the code below:</p>
+                        <pre>$.kreate();</pre>
+                        <p>
+                            <strong>Congrats!</strong> You just kreated your first element. By default, if arguments are missing from $.kreate(), Kreate will make an empty &lt;div>.
+                        </p>
+                        <pre>&lt;div>&lt;/div></pre>
 
-                    <P>There are a handful of options that can customize and fancify your elements. Because you're a boss, you can <a href="https://github.com/ItsJonQ/kreate#options" target="_blank"><strong>learn more</strong></a> about the various options on Github.</p>
+                    </article>
 
+                    <article id="tut-express">
+                        <h3>2. Express Kreation</h3>
+                        <p>There are two ways you can kreate elements - express and advanced. For this portion of the tutorial, we're going to be focusing on the express method. It's cleaner, faster, and goes great with salad.</p>
+
+                        <p>To express kreate something, enter a <strong>string</strong> into the kreate function.</p>
+                        <strong>Format</strong>: $.kreate( ' selector#id.class ' );<br>
+                        <ul>
+                            <li>selector - Type of element (e.g. div, span, image, ul..)</li>
+                            <li>#id - ID of element <span class="text-muted">(not required)</span></li>
+                            <li>.class - class of element <span class="text-muted">(not required)*</span></li>
+                        </ul>
+
+                        <p><small>* Just a heads up, you can only add one class to the element. Adding additional classes like this ".class1.class2.class3" does <em>nothing</em> - <a href="http://youtu.be/tOrI6uqS-vk?t=12s" target="_blank">Nothing!</a>.</small></p>
+
+                        <p>Now that you know the express formatting, let's start <strong>express</strong>ing ourselves!</p>
+
+                        <h4>Express Creating a Single Element</h4>
+
+                        <p>Let's try express kreating a div with a class..</p>
+                        <pre>$.kreate('div.fancy');</pre>
+                        <p>
+                            <strong>Awesome!</strong> Wow, you're doing great. You just made this:
+                        </p>
+                        <pre>&lt;div class="fancy">&lt;/div></pre>
+
+                        <p>Next, let's try something a little fancier. Let's make a div with an ID <strong>&</strong> a class:</P>
+                        <pre>$.kreate('div.#goodness.super-fancy');</pre>
+                        <p>
+                            Great work - You just made this:
+                        </p>
+                        <pre>&lt;div id="goodness" class="super-fancy">&lt;/div></pre>
+
+                        <br>
+                        <h4>Express Creating Multiple Elements</h4>
+                        <p>Yes, oh yes. You can make multiple elements with the express method. In fact, you can make as many elements as your heart desires! Well, almost.. 12 million divs is a bit much.</p>
+
+                        <p>All you have to do is add a <strong>number</strong> after your <strong>string</strong>. Let's try it:
+                        <pre>$.kreate('div.fancy', 7);</pre>
+
+                        <p>Did you just make 7 divs? Yes you did - what a baller!</p>
+                        <pre>&lt;div class="fancy">&lt;/div>
+&lt;div class="fancy">&lt;/div>
+&lt;div class="fancy">&lt;/div>
+&lt;div class="fancy">&lt;/div>
+&lt;div class="fancy">&lt;/div>
+&lt;div class="fancy">&lt;/div>
+&lt;div class="fancy">&lt;/div></pre>
+
+                        <br>
+                        <h4>Express Outputing</h4>
+                        <p>By default, Kreate makes a jQuery object with all of your wonderful elements neatly wrapped inside. Alternatively, you can output your elements either as an <strong>HTML string</strong> or as a good ol' fashioned <strong>array</strong>.</P>
+
+                        <p>To change the output type, just add either <strong>HTML</strong> or <strong>array</strong> as the <em>third</em> argument in the kreate function.</p>
+
+                        <h5>Outputing as an HTML String</h5>
+<pre>$.kreate('div.topic', 2, 'html');
+
+// This snippet should return
+// '&lt;div class="topic">&lt;/div>&lt;div class="topic">&lt;/div>'
+
+</pre>
+
+                        <h5>Outputing as an Array</h5>
+<pre>$.kreate('div.topic', 2, 'array');
+
+// This snippet should return
+// [&lt;div class="topic">&lt;/div>, &lt;div class="topic">&lt;/div>]
+
+</pre>
+
+                        <p>It looks like you've mastered the express method. I tip my hat off to you. However noble one, are you ready to take on advanced? Why did I even bother asking, of course you are!</p>
+                    </article>
+
+                    <article id="tut-advanced" class="last">
+                        <h3>3. Advanced Kreation</h3>
+                        <p>Instead of a string, advanced kreation works by entering an <strong>object</strong> into the Kreate function.</p>
 <pre><code>$.kreate({
-    tag: 'div',
-    class: 'classname',
-    length: 5,
-    id: 'post',
-    attr: {
+    tag: 'div',     // selector
+    class: 'item',  // class
+    id: 'post',     // id
+    length: 5,      // # of elements
+    attr: {         // attributes
         'data-lazy': true
-    }
+    },
+    content: ""     // content inside element
+    uniqueId: true, // id numeration
+    startId: 1      // id numeration start point,
+    output: 'jquery'// output type
 });
 </code></pre>
+                        <p>There's definitely more code to write compared to express. The benefit of advanced kreation is that you'll be able to enter in (custom) attributes, such as the 'src' attribute for an 'img' element. You'll also be able to define the starting ID when element ID's are numerated (more on that later!).</p>
 
-                    <p>That baller of a snippet above should render the following elements:</p>
-<pre><code>&lt;div id="post-1" data-lazy="true" class="classname">&lt;/div>
-&lt;div id="post-2" data-lazy="true" class="classname">&lt;/div>
-&lt;div id="post-3" data-lazy="true" class="classname">&lt;/div>
-&lt;div id="post-4" data-lazy="true" class="classname">&lt;/div>
-&lt;div id="post-5" data-lazy="true" class="classname">&lt;/div>
+                        <p>Let's try making five &lt;li> elements, with a class of "item" and a custom data-load attribute of "inactive":
+<pre><code>$.kreate({
+    tag: 'li',
+    class: 'item',
+    length: 5,
+    attr: {
+        'data-load': inactive
+    },
+});
 </code></pre>
+                        <p>
+                            <strong>Whew</strong>! That wasn't so bad! You just made this:
+                        </p>
+<pre>&lt;li class="item" data-load="inactive">&lt;/li>
+&lt;li class="item" data-load="inactive">&lt;/li>
+&lt;li class="item" data-load="inactive">&lt;/li>
+&lt;li class="item" data-load="inactive">&lt;/li>
+&lt;li class="item" data-load="inactive">&lt;/li></pre>
 
-                    <h3>Visual Example</h3>
-                    <p>The gif below shows how you can create a jQuery object with 5 divs with the class of "yay"!</p>
-                    <p class="highlight text-center">
-                        <pre>
-                            <img src="images/kreate-example.gif">
-                        </pre>
-                    </p>
-                    <p class="text-center">
-                        <a href="https://github.com/ItsJonQ/kreate#options" class="btn btn-kreate bordered" title="Download Kreate">Learn More</a>
-                    </p>
+                        <h5>Visual Example</h5>
+                        <p>The gif below shows how you can advance kreate a jQuery object with five divs with the class of "yay".</p>
+                        <p class="highlight text-center">
+                            <pre>
+                                <img src="images/kreate-example.gif">
+                            </pre>
+                        </p>
+
+                        <br>
+
+                        <h4>Unique ID & Start ID</h4>
+                        <p>These settings are specific to advance and only kick in if you're making multiple elements <strong>&</strong> you have an ID defined. This is to make sure that whatever ID you choose during the kreation process isn't duplicated.</p>
+
+                        <h5>Unique ID</h5>
+                        <p>As mentioned above, Kreate will automatically numerate IDs if you're making more than one element. By default, Unique ID is switched on. It is <strong>highly recommended</strong> that you leave this setting alone.. it smells..<br>But, if you <em>really</em> need to, setting uniqueId to <strong>false</strong> switches off numeration.</p>
+                        <p>Let's see some ID numeration in action shall we?</p>
+<pre><code>$.kreate({
+    tag: 'li',
+    id: 'task',
+    class: 'item',
+    length: 3
+});
+</code></pre>
+                        <p>Goodness - Look at what you just made! Numerated IDs? Heck yes!</p>
+<pre>&lt;li class="item" id="task-1">&lt;/li>
+&lt;li class="item" id="task-2">&lt;/li>
+&lt;li class="item" id="task-3">&lt;/li></pre>
+
+                        <h4>Start ID</h4>
+                        <p>By default, numerating IDs start at <strong>1</strong>. But, with a little bit of magic and a handful of Ke$ha glitter, you can change the starting ID to whatever you want!</p>
+
+<pre><code>$.kreate({
+    tag: 'li',
+    id: 'task',
+    class: 'item',
+    length: 3,
+    startId: 15
+});
+</code></pre>
+                        <p>Is it magic? No.. just plain ol' Ke$ha glitter.</p>
+<pre>&lt;li class="item" id="task-15">&lt;/li>
+&lt;li class="item" id="task-16">&lt;/li>
+&lt;li class="item" id="task-17">&lt;/li></pre>
+
+                        <p>Welp, that's it for <strong>Kreating 101</strong>! By now, you should be a master kreator. If you want more details on the various features and settings, check out the project on Github.</p>
+
+                        <p class="text-center">
+                            <a href="https://github.com/ItsJonQ/kreate#options" class="btn btn-kreate bordered" title="Download Kreate">Learn More</a>
+                        </p>
+
+                    </article>
+
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Get Kreating! -->
     <section class="featurette white">
