@@ -48,6 +48,25 @@ Once you've got the files either from Github or Bower, load up Kreate **after** 
 <script type="text/javascript" src="kreate.js"></script>
 ```
 
+## Learning How to "Kreate"
+You can kreate elements using two kreation methods: "express" and "advanced".
+
+##### Express
+```
+$.kreate('div.classname');
+```
+
+##### Advance
+```
+$.kreate({
+    tag: 'div',
+    class: 'classname'
+});
+```
+
+Learn more about these methods by checking out [http://itsjonq.github.io/kreate/#kreating-101](Kreating 101).
+
+
 ## Options
 Kreate was intentionally kept relatively minimal to ensure that executes quickly. Nevertheless, there are a handful of options that can customize and fancify your elements.
 
@@ -215,7 +234,7 @@ This will render the follow HTML elements
 ```
 
 #### output
-Option: `output`  Settings: `jquery` || `html`  Default: `jquery`  Type: `string`
+Option: `output`  Settings: `jquery` || `html` || `array`  Default: `jquery`  Type: `string`
 ```
 $.kreate({ output: 'jquery' });
 ```
@@ -230,6 +249,9 @@ The variable "a" should equal
 ```
 <li></li><li></li><li></li>
 ```
+
+You can also output Kreate as an array by using `output: "array"`.
+
 
 ## Have Fun!
 That's it! There isn't really much to it. Any and all feedback is welcome! Good luck and have fun **Kreating** :).
