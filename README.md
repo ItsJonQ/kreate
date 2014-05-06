@@ -256,7 +256,9 @@ You can also output Kreate as an array by using `output: "array"`.
 ## Have Fun!
 That's it! There isn't really much to it. Any and all feedback is welcome! Good luck and have fun **Kreating** :).
 
-## "Kreator" ( Get it? No? Fine.. ;) )
+## "Kreator"
+Get it? No? Fine.. ;)
+
 #### Jon Q
 - [http://www.jonquach.com](http://www.jonquach.com)
 - [http://www.twitter.com/itsjonq](http://www.twitter.com/itsjonq)
