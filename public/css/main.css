@@ -50,11 +50,16 @@ table {
 
 .featurette {
     background: #f5f5f5;
-    padding: 30px 10px;
+    padding: 30px 15px;
 }
 
 .featurette.white {
     background-color: white;
+}
+
+.featurette .container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .featurette article {
