@@ -1,7 +1,7 @@
 /*!
  * Kreate.js
  * A tiny element creator plugin for jQuery. This plugin was inspired by the .create() method from the Zest.js library.
- * v0.0.3 (https://github.com/ItsJonQ/kreate)
+ * v0.0.5 (https://github.com/ItsJonQ/kreate)
  * Copyright 2014 Jon Q
  * Licensed under MIT (https://github.com/itsjonq/kreate/blob/master/LICENSE)
  */
@@ -13,11 +13,23 @@
         return false;
     }
 
+    // Defining kreate variable
     var kreate;
 
-    // Defining kreate
+    /**
+     * kreate
+     * Defining and creating the kreate method for jQuery. The
+     * method can be triggered by executing:
+     *
+     * $.kreate()
+     *
+     * @param  { string / object } options [ settings for the plugin ]
+     * @param  { number } length  [ the number of elements to create ]
+     * @param  { string } output  [ the type of output ]
+     * @return { jQuery object / string / array }
+     */
     kreate = function(options, length, output) {
-
+        // Defining variables to cache to type of the options argument
         var isString = typeof options === "string";
         var isObject = typeof options === "object";
 
@@ -55,11 +67,14 @@
 
 
         /**
-         * "Quick" Kreation Parsing
+         * "Express" Kreation Parsing
          * This allows the user to quickly Kreate elements using a string as
          * the options argument instead of an object.
          *
          * Example: $.kreat('div.thumbnail');
+         *
+         * TODO: Look into Emmet / ZenCoding string parsing for easier and
+         * more powerful element creation.
          */
 
         // Define the settings if the options is a string
@@ -88,7 +103,17 @@
         // Setting the options object output if applicable
         options.output = (output && typeof output === "string") ? output : "jquery";
 
-        // Define the settings
+
+        /**
+         * Defining the Settings
+         *
+         * This is the default object used by the "Advance" Kreation method.
+         * A "settings" object will be made/used in the creation proess,
+         * whether the user chooses to Kreate with a string (Express)
+         * or an object (Advanced).
+         *
+         * @type {[type]}
+         */
         settings = $.extend({
             tag: tagName,
             id: "",
@@ -128,26 +153,37 @@
          * Creating and pushing the elements to the els array to output
          * the jQuery object
          */
-        // Defining the attributes
+        // Defining the attributes from the settings
         var attr = settings.attr;
 
         // Defining the loop variables
         var i = 0;
         var len = settings.length;
 
+        // Looping through the length (amount) of elements the user chooses
+        // to Kreate
         for( ; i < len; i++) {
             // Creating the element
             var el = document.createElement(settings.tag);
 
-            // Set the class
+            // Set the class of the element
             if(settings.class) {
                 el.className = settings.class;
             }
-            // Set the ID
+            // Set the ID of the element
             if(settings.id) {
+
+                /**
+                 * ID Numeration
+                 * If the user chooses to create multiple elements and an ID
+                 * is defined, Kreate will automatically add numeration
+                 * to the ID to prevent duplicates
+                 */
                 if(len > 1 && settings.uniqueId === true) {
+                    // Setting the numerated ID
                     el.id = settings.id + "-" + (settings.startId + i);
                 } else {
+                    // Setting the ID without numeration
                     el.id = settings.id;
                 }
             }
@@ -162,7 +198,7 @@
                     }
                 }
             }
-            // Adding the Content
+            // Adding the Content to the element
             if(settings.content && typeof settings.content === "string") {
                 // Setting the innerHTML of the el
                 el.innerHTML = settings.content;
@@ -174,13 +210,18 @@
 
 
         /**
-         * Outputting jQuery Object
-         * Returning the jQuery object with the generated elements
+         * Outputting the newly Kreated elements
+         *
+         * By default, Kreate will output a jQuery object. However, the
+         * user can also output Kreated elements as an HTML string,
+         * or as an array.
          */
+
         // Return jQuery object if els array has elements in it
         if(els.length > 0) {
             // Return the jQuery object with the newly created elements
             if(settings.output === "jquery") {
+                // Returning $() with the array of elements
                 return this(els);
             }
 
