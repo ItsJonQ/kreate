@@ -1,4 +1,4 @@
-#Kreate.js#
+# Kreate.js #
 A tiny element creator plugin for jQuery.
 
 <img src="https://raw.githubusercontent.com/ItsJonQ/kreate/master/images/kreate-logo.png">
@@ -12,7 +12,7 @@ In most cases, Kreate can create a single or multiple elements faster than jQuer
 
 Kreate can also be quicker and cleaner to write if you're planning on generating a series of elements.
 
-#####Kreate Example#####
+##### Kreate Example #####
 ```
 $.kreate({
     tag: 'li',
@@ -21,7 +21,7 @@ $.kreate({
 });
 ```
 
-#####jQuery Example#####
+##### jQuery Example #####
 ```
 $('<li class="list-item"></li><li class="list-item"></li><li class="list-item"></li><li class="list-item"></li><li class="list-item"></li>');
 ```
@@ -42,7 +42,7 @@ bower install kreate
 
 Once you've got the files either from Github or Bower, load up Kreate **after** you add jQuery to your project
 
-#####Example#####
+##### Example #####
 ```
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="kreate.js"></script>
